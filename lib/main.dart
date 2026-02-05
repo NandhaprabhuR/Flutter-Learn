@@ -1,19 +1,29 @@
 import 'package:flutter/material.dart';
-// import 'package:flutter/dart:ui';
+
 void main() {
-  runApp(
+  runApp(const MainApp());
+}
 
-    MaterialApp(debugShowCheckedModeBanner: false,
+class MainApp extends StatelessWidget {
+  const MainApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
       home: Scaffold(
+        body: Center(
+          child: Container(
+            height: 200,
+            width: 200,
+            decoration: BoxDecoration
+              (borderRadius:BorderRadius.circular(40),color: Colors.cyan,),
+              alignment: Alignment.center,
+            child:  Text("Hello Flutter"),
 
-        backgroundColor: Colors.yellow,
-        appBar: AppBar(title: Text("swiggy"),backgroundColor: Colors.amber,
-        centerTitle: false,),),),
-
-      );
-
-    }
-
-
-
-
+          ), // Container
+        ), // Center
+      ), // Scaffold
+    ); // MaterialApp
+  }
+}
