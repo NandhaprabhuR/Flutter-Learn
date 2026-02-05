@@ -19,9 +19,14 @@ class MainApp extends StatelessWidget {
             decoration: BoxDecoration
               (borderRadius:BorderRadius.circular(40),color: Colors.cyan,),
               alignment: Alignment.center,
-            child:  Text("Hello Flutter"),
+            child:  Container(
+              height: 150,width: 150,
+              decoration: BoxDecoration(borderRadius:BorderRadius.circular(1),color: Colors.red),
+              child: Text("hello"),alignment: Alignment.center,
+            )
 
-          ), // Container
+
+          ), // Containerc
         ), // Center
       ), // Scaffold
     ); // MaterialApp
