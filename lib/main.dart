@@ -18,11 +18,24 @@ class MainApp extends StatelessWidget {
             width: 200,
             decoration: BoxDecoration
               (borderRadius:BorderRadius.circular(40),color: Colors.cyan,),
-              alignment: Alignment.center,
-            child:  Container(
-              height: 150,width: 150,
-              decoration: BoxDecoration(borderRadius:BorderRadius.circular(1),color: Colors.red),
+            child:  Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [Container(
+              height: 100,width: 100,
+              decoration: BoxDecoration(borderRadius:BorderRadius.circular(10),color: Colors.red),
               child: Text("hello"),alignment: Alignment.center,
+              padding: EdgeInsets.all(15),
+
+            ),
+              Container(
+              height: 100,width: 100,
+              decoration: BoxDecoration(borderRadius:BorderRadius.circular(10),color: Colors.red),
+              child: Text("hello"),alignment: Alignment.centerRight,
+              padding: EdgeInsets.all(15),),
+
+
+]
             )
 
 
