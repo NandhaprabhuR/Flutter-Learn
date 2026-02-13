@@ -36,24 +36,19 @@ class SecondApp extends StatefulWidget{
 }
 
 class SecondAppState extends State<SecondApp>{
-  String displaytext ="nandha";
 
+  String displaytext ="nandha";
+ List<String>sample=["nandha","abi","gopal"];
   @override
   Widget build(BuildContext context) {
     return MaterialApp  (debugShowCheckedModeBanner:false,home: Scaffold(backgroundColor: Colors.black12,
       appBar: AppBar (backgroundColor: Colors.blue,title:Text("hello")),
-      body: Column(
-        children: [Text(displaytext),
-        MaterialButton(child: Text("clickme"),
-            onPressed: (){
-          setState(() {
-            displaytext="bye";
-          });
-          displaytext="bye";
-        //  print("mac");
-        })],
-
-      )),);
+      body:ListView.builder(itemCount: sample.length,
+          itemBuilder:
+          (context,index){
+        return Text(sample[index]);
+      }))
+    ,);
   }
 }
 
